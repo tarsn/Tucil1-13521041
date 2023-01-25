@@ -1,0 +1,3 @@
+Kartu yang dimiliki 5 7 8 11
+
+Total kemungkinannya adalah sebanyak 0

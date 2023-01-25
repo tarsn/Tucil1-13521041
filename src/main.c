@@ -24,7 +24,6 @@ int main() {
 
         clock_t start, end;
         start = clock();
-        printf("\nKemungkinan solusi dari kartu adalah: \n");
         float arr[4];
         for (int i=0; i<4; i++) {
             arr[i] = inp.idx[i];
@@ -70,7 +69,6 @@ int main() {
                                             default : break;
                                         }
                                         if (hasil == 24) {
-                                            printf("(%.0f %c %.0f) %c (%.0f %c %.0f)\n", arr[i], c1, arr[j], c2, arr[k], c3, arr[l]);
                                             nos += 1;
                                         }
 
@@ -97,7 +95,6 @@ int main() {
                                             default : break;
                                         }
                                         if (hasil == 24) {
-                                            printf("((%.0f %c %.0f) %c %.0f) %c %.0f\n", arr[i], c1, arr[j], c2, arr[k], c3, arr[l]);
                                             nos += 1;
                                         }
 
@@ -124,7 +121,6 @@ int main() {
                                             default : break;
                                         }
                                         if (hasil == 24) {
-                                            printf("(%.0f %c (%.0f %c %.0f)) %c %.0f\n", arr[i], c1, arr[j], c2, arr[k], c3, arr[l]);
                                             nos += 1;
                                         }
 
@@ -151,7 +147,6 @@ int main() {
                                             default : break;
                                         }
                                         if (hasil == 24) {
-                                            printf("%.0f %c ((%.0f %c %.0f) %c %.0f)\n", arr[i], c1, arr[j], c2, arr[k], c3, arr[l]);
                                             nos += 1;
                                         }
 
@@ -178,7 +173,6 @@ int main() {
                                             default : break;
                                         }
                                         if (hasil == 24) {
-                                            printf("%.0f %c (%.0f %c (%.0f %c %.0f))\n", arr[i], c1, arr[j], c2, arr[k], c3, arr[l]);
                                             nos += 1;
                                         }
                                     }
@@ -189,14 +183,15 @@ int main() {
                 }
             }
         }
-        printf("\nTotal kemungkinannya adalah sebanyak %i\n", nos);
+        printf("\nTotal kemungkinannya adalah sebanyak %i\n\n", nos);
+        printsol(inp);
         end = clock();
         double timespent= (double)(end-start) / CLOCKS_PER_SEC;
-        printf("Waktu Eksekusinya sebesar %f detik\n\n", timespent);
+        printf("\nWaktu Eksekusinya sebesar %f detik\n\n", timespent);
 
         boolean cekbf = true;
         while (cekbf) {
-            printf("Apakah menyimpan outputannya?\n1. Ya\n2. Tidak\n>>> ");
+            printf("Apakah ingin menyimpan outputannya?\n1. Ya\n2. Tidak\n>>> ");
             int tmppil;
             scanf("%d", &tmppil);
             if (tmppil == 1) {
@@ -219,7 +214,7 @@ int main() {
             } else if (tmppil == 2) {
                 ceklas = false;
                 game = false;
-                printf("Termkasih. Semoga bertemu dilain waktu :D\n");
+                printf("Terimakasih. Semoga bertemu dilain waktu :D\n");
             } else {
                 printf("Inputan tidak sesuai, silahkan ulangi lagi!\n");
             }
